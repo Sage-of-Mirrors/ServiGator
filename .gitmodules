@@ -1,1 +1,4 @@
 
+[submodule "lib/restbed"]
+	path = lib/restbed
+	url = git@github.com:Corvusoft/restbed.git
