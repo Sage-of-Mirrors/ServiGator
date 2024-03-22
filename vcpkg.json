@@ -1,0 +1,7 @@
+{
+    "name" : "servigator",
+    "version-string" : "servigator-win",
+    "dependencies": [
+        "restbed"
+    ]
+}
