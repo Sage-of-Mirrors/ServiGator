@@ -6,6 +6,8 @@
 
 #pragma once
 
+#define WIN32_LEAN_AND_MEAN
+
 #include "..\..\inc\natives.h"
 #include "..\..\inc\types.h"
 #include "..\..\inc\enums.h"
