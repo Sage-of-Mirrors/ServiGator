@@ -15,12 +15,12 @@ void DisplayObjective(const char* objective)
 	UILOG::_UILOG_CLEAR_CACHED_OBJECTIVE();
 }
 
+CServer gServer;
+
 void main()
 {		
 	bool bServerStarted = false;
-
-	CServer server;
-	server.Start();
+	gServer.Start();
 
 	// Tick loop
 	while (true)
@@ -28,7 +28,7 @@ void main()
 		// Display a message if the server started successfully
 		if (!bServerStarted)
 		{
-			if (server.IsServerRunning())
+			if (gServer.IsServerRunning())
 			{
 				bServerStarted = true;
 				DisplayObjective("ServiGator up and running!");
@@ -37,4 +37,9 @@ void main()
 
 		WAIT(0);
 	}
+}
+
+void scriptShutdown()
+{
+	gServer.Stop();
 }

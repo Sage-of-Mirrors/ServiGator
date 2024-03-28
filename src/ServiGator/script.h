@@ -15,3 +15,4 @@
 #include "..\..\inc\main.h"
 
 void main();
+void scriptShutdown();
