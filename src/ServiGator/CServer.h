@@ -1,9 +1,12 @@
 #pragma once
 
 #include "httplib.h"
+#include "json.hpp"
 
 #include <thread>
 #include <mutex>
+#include <string>
+#include <memory>
 
 class CServer
 {
@@ -20,6 +23,7 @@ public:
 
 	void Start();
 	void Stop();
-
 	bool IsServerRunning() const;
+
+	void DispatchCommand(std::shared_ptr<nlohmann::json> cmdJson);
 };
